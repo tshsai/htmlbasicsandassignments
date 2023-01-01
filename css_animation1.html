@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+       
+
+        .container{
+            background-color: dodgerblue;
+            height: 200px;
+            width: 200px;
+            position: relative;
+        }
+        
+    </style>
+</head>
+<body>  
+    <button onclick="start()">move</button>
+    <button onclick="stop()">stop</button>
+    <button onclick="reset()">reset</button>
+    <div id="info" class="container">
+    </div>
+    <script>
+        let element = document.getElementById('info');
+        let pos = 0;
+        let id = null;
+        function moveDiv(){
+            pos = pos + 20;
+            element.style.left = pos + 'px';
+        }
+        function start(){
+            if(id==null){
+                id = setInterval(moveDiv,100);
+            }
+            
+        }
+        function stop(){
+            clearInterval(id);
+            id=null;
+        }
+        function reset(){
+            clearInterval(id);
+            id=null;
+            pos = 0;
+            element.style.left = pos + 'px';
+        }
+    </script>
+</body>
+</html>
+

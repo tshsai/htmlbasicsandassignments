@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+       
+
+    </style>
+</head>
+<body>     
+    
+    <input type="text" id="somevalue"/><span id="error"></span><br/>
+    <button onclick="validateValue()">Submit</button>
+
+    <script>
+        let errorBox = document.getElementById("error");
+        function validateValue(){
+            someValue = document.getElementById("somevalue").value;
+            if(someValue.length < 8){
+                errorBox.innerHTML = "*password must be 8 chars";
+                errorBox.style.color = 'red';
+            }else{
+                console.log(someValue);
+            }
+            
+        }
+    </script>
+</body>
+</html>

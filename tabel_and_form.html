@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>hiii</title>
+        <style>
+            table{
+                width: 50%;
+                text-align: center;
+                border:2px solid black;
+                border-collapse: collapse;
+            }
+            *{
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>25 june 2022</h1>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th colspan="2">NAME</th>
+                <th>DEPT</th>
+            </tr>
+            <tr>
+                <td>235</td>
+                <td rowspan="2">sai</td>
+                <td>CSE</td>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td>abc</td>
+                <td>ECE</td>
+            </tr>
+            <tr>
+                <td>456</td>
+                <td>def</td>
+                <td>CSE</td>
+            </tr>
+        </table>
+        <p>today is <span style="color: blue;">Friday</span></p>
+        <form style="border: 2px solid black;text-align: center;">
+            <caption>Registration Page</caption><br><br>
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname"><br><br>
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname"><br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="number" name="phone"><br><br>
+            <label> email: <input type="email"></label><br>
+            <br><label>password: <input type="password"></label><br>
+            <br><label for="country">Country:</label>
+            <select name="country">
+                <option value="india">INDIA</option>
+                <option value="usa">USA</option>
+                <option value="china">CHINA</option>
+            </select><br><br>
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" value="male">MALE
+            <input type="radio" name="gender" value="female">FEMALE<br><br>
+            <label for="textarea">write about yourself</label><br><br>
+            <textarea name="textarea"  cols="100%" rows="10">your experience</textarea><br><br>
+            <input type="file"><br><br>
+            <input type="reset" value="submit"><br><br>
+            <input type="image" src="data:image/webp;base64,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" width="400" height="200">
+        </form>
+        
+    </body>
+</html>

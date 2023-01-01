@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">hiii</p>
+    <input onchange="sayhello()" type="text" placeholder="enter any thing">
+    <button id="btn">click me</button>
+    <script>
+        let button_element=document.getElementById('btn');
+        button_element.addEventListener('click',sayhello);
+        button_element.removeEventListener('click',sayhello);
+        function sayhello(){
+            let pa=document.getElementById("para");
+            pa.innerHTML="Hello World";
+        }
+
+        let promisehi=new Promise(function(resolve,reject){
+            let gontogym=true;
+            if(gontogym==true){
+                resolve("I fullfilled the promise");
+            }else{
+                reject("sorry i broke my promise");
+            }
+        });
+        promisehi.then(function(msg){}).catch(function(msg){});
+    </script>
+</body>
+</html>

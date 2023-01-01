@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #info{
+            background-color: red;
+            height: 200px;
+            width: 200px;
+            position: relative;
+            padding:0px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="start()">move</button>
+    <button onclick="stop()">stop</button>
+    <button onclick="reset()">reset</button>
+    <div id="info" class="container">
+    </div>
+    <script>
+        /*let flag=true;
+        let elem=document.getElementById("info");
+        function change(){
+            if(flag==true){
+                elem.innerHTML="byy";
+                elem.style.backgroundColor='red';
+                flag=false;
+            }else{
+                elem.innerHTML="hii";
+                elem.style.backgroundColor="yellow";
+                flag=true;
+            }
+        }*/
+        let element = document.getElementById('info');
+        let pos = 0;
+        let id = null;
+        let c=0;
+        function moveDiv(){
+            if(c<100){
+            pos = pos + 40;
+            c+=20
+            element.style.left = pos + 'px';
+            }else if(c>=100 && c<200){
+                if(c===100){
+                    pos=0;  
+                }
+                pos=pos+40;
+                c=c+20;
+                element.style.top=pos+'px';
+            }else if(c>=200 && c<250){
+                //console.log(parseInt(element.style.left[0]+element.style.left[1]+element.style.left[2])-20);
+                if(c===200){
+                    pos=0;
+                }
+                pos=pos+40;
+                c=c+20;
+                element.style.left=(parseInt(element.style.left[0]+element.style.left[1]+element.style.left[2])-pos)+'px';
+                
+            }else if(c>=250 && c<280){
+                if(c===250){
+                    pos=0;
+                }
+                pos=pos+40;
+                c=c+20;
+                element.style.top=(parseInt(element.style.top[0]+element.style.top[1]+element.style.top[2]) - pos)+'px';
+                console.log(element.style.top);
+            }
+        }
+        function start(){
+            if(id==null){
+                id = setInterval(moveDiv,100);
+            }
+        }
+        function stop(){
+            clearInterval(id);
+            id=null;
+        }
+        function reset(){
+            clearInterval(id);
+            id=null;
+            pos = 0;
+            element.style.left = pos + 'px';
+        }
+    </script>
+</body>
+</html>

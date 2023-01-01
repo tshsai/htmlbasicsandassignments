@@ -1,0 +1,12 @@
+p {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    direction: rtl;
+    text-align: right;
+    text-transform: uppercase;
+    word-spacing: 10px;
+    line-height: 50px;
+    text-shadow: 4px 2px rgb(226, 175, 175);
+}

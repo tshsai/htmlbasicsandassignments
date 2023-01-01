@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*var x=parseInt(prompt("enter a value"));
+        var y=parseInt(prompt("enter second value"));
+        
+        alert(x+y);
+        alert(x-y);
+        alert(x*y);
+        var x=parseInt(prompt("Enter a number"));
+        if (x>0){
+            alert("positive number");
+        }
+        else{
+            alert("negetive number");
+        }
+        
+       var x=prompt("enter the numerical days");
+       switch(x){
+        case "0":
+            alert("Sunday");
+            break;
+        case "1":
+            alert("Monday");
+            break;
+        default:alert("wrong input");
+       }
+       var i=0;
+       while(i<=20){
+        if(i==10){
+            i=i+2;
+            continue;
+        }
+        console.log(i);
+        i=i+2;
+       }
+       
+       function sum(a,b) // creating construcor 
+        {
+         this.a=a; // properties
+         this.b=b;   // this is a keyword to bind values to a variable
+        this.mul=function() // method for doing the addition ,generic
+        {
+            return this.a*this.b;
+        }
+    }
+        var s1= new sum(2,3); //object creation , s1 is an object 
+        console.log(s1.mul()); // accessing the mul method*/
+        const a=["a","b"];
+        const b=["a","b",1,true,false];
+        console.log(b[2]);
+        console.log(b.length);
+        const c=new Array("a","b",1,2);
+        console.log(typeof(c));
+        console.log(Array.isArray(c));
+        for(let i=0;i<a.length;i++){
+            console.log(a[i]);
+        }
+        a[1]=1;
+        for(let i=0;i<a.length;i++){
+            console.log(a[i]);
+        }
+        a.push(20);//for inserting at the end
+        console.log(a);
+        a.unshift(100);//for inserting at the begining
+        console.log(a);
+        a.pop(100);
+        console.log(a);
+        a.pop();//for deleting from thw end
+        console.log(a);
+        a.shift();
+        console.log(a);
+        //creating the clone of the array
+        const d=b.slice();
+        console.log(d);
+        console.log(d===b);
+        console.log(d==b);
+        console.log(d[0]);
+        /*let x=b[0];
+        let y=b[1];
+        let z=b[2];*/
+        let [x,y,z,...le]=[b[0],b[1],b[2],20,30];//rest parameter
+        let [f,g=1,h]=[b[0],b[1]];
+        console.log(x,y,z);
+        console.log(f,g,h);
+        console.log(le);
+        const arr1=[...b];//spread operator
+        console.log(arr1);
+        //merge two arrays
+        const ar1=[...a,...b];
+        console.log(ar1);
+
+
+        let sides=[10,11,12,13];
+        /*let fi=[];
+        let temp=0;
+        for(let i=0;i<sides.length;i++){
+            temp=sides[i]*sides[i];
+            fi.push(temp);
+        }
+        console.log(fi);
+        
+       function area(sides){
+        return sides*sides;
+       }
+       let temp=sides.map(area)
+       console.log(temp);
+
+      let arr5=[1,9,3,10,5];
+      let tr=[];
+      for(let i=0;i<arr5.length;i++){
+        if(arr5[i]>8){
+            tr.push(arr5[i])
+        }
+      }
+      console.log(tr);
+
+      function rh(hi){
+        if(hi>8){
+            return hi;
+        }
+      }
+      let byy=arr5.filter(rh);
+      console.log(byy);
+      */
+      //reduce method in java script
+      function getsum(total,num){
+        return total+Math.round(num);
+      }
+      let nums=[15.5, 2.3, 1.1, 4.7];
+      console.log(nums.reduce(getsum,0));
+
+      //sort
+      let hii=[1,6,7,8,2];
+      //console.log(hii.sort());
+      hii.sort(function(x,y){return x-y;})
+      console.log(hii);
+    
+      //functions that are passes as arguments to other functions are called as callback functions
+      function add(){
+        let res=10+20;
+        console.log(res);
+      }
+      function show(myFunction){
+        console.log("hello world");
+        myFunction();
+      }
+      show(add);
+      
+    </script>
+    <form>
+        
+    </form>
+</body>
+</html>

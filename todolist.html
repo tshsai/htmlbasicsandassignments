@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>     
+    
+    <input type="text" id="item"/>
+    <button onclick="addItem()">Add</button>
+    <ul id="list"></ul>
+    
+   <script>
+    let list = document.getElementById("list");
+
+    function addItem(){
+        let item = document.getElementById('item').value;
+        let listItem = document.createElement('li');
+        listItem.innerHTML = item;
+        list.appendChild(listItem);
+    }
+
+   </script>
+    
+</body>
+</html>
+
